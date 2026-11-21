@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PropCapital.ai | Homes in Gurugram, Faridabad & Noida</title>
+    <meta
+      name="description"
+      content="RERA-verified homes across NCR, matched to your budget and lifestyle. Zero brokerage for buyers."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#top" aria-label="PropCapital.ai Home">
+          <svg class="brand-icon" viewBox="0 0 48 48" fill="none">
+            <path
+              d="M5 40V22L17 14V40"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 40V9L30 2V40"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M30 40V19L43 12V40"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 43H45"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>PropCapital<span class="brand-ai">.ai</span></span>
+        </a>
+        <nav id="nav" aria-label="Main"></nav>
+        <a class="btn gold sm" href="#list"
+          >List your property <i class="free">Free</i></a
+        >
+        <a class="btn line sm login" href="#">Login</a>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <i></i><i></i><i></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="wrap hero-in">
+          <a class="pill" href="#nri">Living abroad? Explore the NRI Hub</a>
+          <h1>NCR’s smartest property platform.</h1>
+          <p class="lead">
+            250+ verified listings across Gurugram, Faridabad and Noida, matched
+            to your goals.
+          </p>
+          <form class="ask" id="heroForm">
+            <input id="heroQ" aria-label="Ask PropCapital" autocomplete="off" />
+            <button class="btn gold">Ask PropCapital</button>
+          </form>
+          <div class="chips dark" id="sugg"></div>
+          <div class="tiles" id="heroStats"></div>
+        </div>
+      </section>
+
+      <section class="sec paper" id="match">
+        <div class="wrap two">
+          <div>
+            <h2>Your next home, matched in 30 seconds.</h2>
+            <p class="lead dk">
+              Stop scrolling. Tell IRA what matters, whether that is budget,
+              area or the life you want, and every NCR listing gets scored and
+              ranked for you.
+            </p>
+            <ul class="feat" id="feat"></ul>
+            <a class="btn ink" href="#heroQ" id="startMatch">Start AI Match</a>
+          </div>
+          <!-- <div class="ira">
+            <div class="tabs" id="iraTabs">
+              <button class="on" data-t="chat">Chat with IRA</button
+              ><button data-t="form">Quick form</button>
+            </div>
+            <div class="ira-grid">
+              <div class="pane">
+                <div class="ira-head">
+                  <b>IRA, your property finder</b
+                  ><small>Describe what you need and I'll find it</small>
+                </div>
+                <div id="chatBody" class="chat-body" aria-live="polite"></div>
+                <form id="chatForm" class="chat-in">
+                  <input
+                    id="chatIn"
+                    placeholder="e.g. 3 BHK in Gurugram under 4 Cr"
+                    autocomplete="off"
+                  /><button class="btn gold sm">Send</button>
+                </form>
+                <form id="quickForm" class="quick" hidden>
+                  <label
+                    >City<select id="qCity">
+                      <option value="">Any</option>
+                      <option>Gurugram</option>
+                      <option>Noida</option>
+                      <option>Faridabad</option>
+                    </select></label
+                  >
+                  <label
+                    >Bedrooms<select id="qBhk">
+                      <option value="">Any</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select></label
+                  >
+                  <label
+                    >Max budget (Cr)<input
+                      id="qBud"
+                      type="number"
+                      step="0.1"
+                      min="0.3"
+                      placeholder="2.5"
+                  /></label>
+                  <button class="btn gold">Find matches</button>
+                </form>
+              </div>
+              <div class="results" id="results"></div>
+            </div>
+          </div> -->
+
+          <div class="ira">
+            <div class="ira-top">
+              <div class="tabs" id="iraTabs">
+                <button class="on" data-t="chat">Chat with IRA</button>
+                <button data-t="form">Quick form</button>
+              </div>
+              <span class="ira-status"><i></i>AI Property Advisor</span>
+            </div>
+            <div class="ira-grid">
+              <div class="pane">
+                <div class="ira-head">
+                  <div class="ira-av">IRA</div>
+                  <div>
+                    <b>IRA, your property finder</b>
+                    <small
+                      >Describe what you need and I'll rank NCR matches</small
+                    >
+                  </div>
+                </div>
+                <div id="chatBody" class="chat-body" aria-live="polite"></div>
+                <form id="chatForm" class="chat-in">
+                  <input
+                    id="chatIn"
+                    placeholder="3 BHK in Gurugram under 4 Cr..."
+                    autocomplete="off"
+                  />
+                  <button class="btn gold sm">Send</button>
+                </form>
+                <form id="quickForm" class="quick" hidden>
+                  <label
+                    >City<select id="qCity">
+                      <option value="">Any</option>
+                      <option>Gurugram</option>
+                      <option>Noida</option>
+                      <option>Faridabad</option>
+                    </select></label
+                  >
+                  <label
+                    >Bedrooms<select id="qBhk">
+                      <option value="">Any</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select></label
+                  >
+                  <label
+                    >Max budget (Cr)<input
+                      id="qBud"
+                      type="number"
+                      step="0.1"
+                      min="0.3"
+                      placeholder="2.5"
+                  /></label>
+                  <button class="btn gold">Find matches</button>
+                </form>
+              </div>
+              <div class="results" id="results"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="how">
+        <div class="wrap hw">
+          <div>
+            <h2>Your journey from search to satisfaction.</h2>
+            <div class="wheel" id="wheel">
+              <svg
+                class="wheel-arc"
+                viewBox="0 0 560 330"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M 56 306 A 224 235 0 0 1 504 306"
+                  stroke="#cfd9be"
+                  stroke-width="2"
+                  stroke-dasharray="6 6"
+                />
+              </svg>
+              <div class="hub"><b>PC</b>PropCapital.ai</div>
+            </div>
+          </div>
+          <div class="stage" id="stage" aria-live="polite"></div>
+        </div>
+        <div class="wrap"><div class="trust" id="trust"></div></div>
+      </section>
+
+      <section class="sec paper" id="config">
+        <div class="wrap">
+          <h2>Unlock your dream home: choose the perfect option</h2>
+          <p class="lead dk">A space tailored for your comfort.</p>
+          <div class="grid5" id="cfg"></div>
+          <div class="bar2">
+            <div>
+              <b>Not sure which configuration fits you?</b><br />Let AI find the
+              perfect match for your needs.
+            </div>
+            <a class="btn gold" href="#match">Find your match</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="devs">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Builders who are changing the game</h2>
+              <p class="lead dk">
+                Meet the builders behind NCR's most coveted addresses.
+              </p>
+            </div>
+          </div>
+          <div class="facts" id="facts"></div>
+          <div class="track" id="devTrack"></div>
+          <div class="pager">
+            <button id="devPrev" aria-label="Previous">‹</button
+            ><span id="devCount"></span
+            ><button id="devNext" aria-label="Next">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec paper" id="budget">
+        <div class="wrap">
+          <h2>A dream home within your budget, yes it's possible!</h2>
+          <p class="lead dk">
+            Explore homes that match your financial comfort.
+          </p>
+          <div class="grid3" id="budgetGrid"></div>
+          <p class="note-bar">
+            Proudly featuring homes across Gurugram's Golf Course Road, SPR,
+            Dwarka Expressway and more.
+          </p>
+        </div>
+      </section>
+
+      <section class="sec" id="timeline">
+        <div class="wrap">
+          <h2>Timing is everything: choose when to move</h2>
+          <p class="lead dk">Your dream home, delivered on your timeline.</p>
+          <div class="grid3" id="timeGrid"></div>
+        </div>
+      </section>
+
+      <section class="sec paper" id="offer">
+        <div class="wrap">
+          <h2>Every property need, one platform.</h2>
+          <div class="bento" id="bento"></div>
+        </div>
+      </section>
+
+      <section class="sec" id="areas">
+        <div class="wrap">
+          <h2>Top localities in Gurugram.</h2>
+          <div class="grid4" id="areaGrid"></div>
+        </div>
+      </section>
+
+      <section class="sec paper" id="homes">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Homes worth a visit</h2>
+              <p class="lead dk" id="homesNote">
+                Sample listings. Filter by size or save the ones you like.
+              </p>
+            </div>
+            <div class="chips" id="bhkChips">
+              <button class="on" data-b="">All</button
+              ><button data-b="1">1 BHK</button><button data-b="2">2 BHK</button
+              ><button data-b="3">3 BHK</button
+              ><button data-b="4">4 BHK+</button>
+            </div>
+          </div>
+          <div class="grid3" id="listings" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="sec" id="tools">
+        <div class="wrap">
+          <h2>Make smarter decisions with better numbers.</h2>
+          <div class="grid3 tools">
+            <div class="card tool">
+              <h3>EMI calculator</h3>
+              <p>Know your monthly home loan payment before you commit.</p>
+              <div class="rg">
+                <label for="rP">Loan <output id="oP"></output></label
+                ><input
+                  id="rP"
+                  type="range"
+                  min="1000000"
+                  max="50000000"
+                  step="100000"
+                  value="8000000"
+                />
+              </div>
+              <div class="rg">
+                <label for="rR">Rate <output id="oR"></output></label
+                ><input
+                  id="rR"
+                  type="range"
+                  min="6"
+                  max="12"
+                  step="0.1"
+                  value="8.5"
+                />
+              </div>
+              <div class="rg">
+                <label for="rN">Tenure <output id="oN"></output></label
+                ><input id="rN" type="range" min="5" max="30" value="20" />
+              </div>
+              <div class="out" id="emiOut"></div>
+            </div>
+            <div class="card tool">
+              <h3>Stamp duty</h3>
+              <p>
+                Rates differ by state and buyer. Estimate your registration
+                cost.
+              </p>
+              <label for="sV">Property value (₹)</label
+              ><input id="sV" type="number" value="10000000" min="0" />
+              <label for="sC">City and buyer</label
+              ><select id="sC">
+                <option value="7">Gurugram, male (7%)</option>
+                <option value="5">Gurugram, female (5%)</option>
+                <option value="7">Noida, male (7%)</option>
+                <option value="6">Noida, female (6%)</option>
+              </select>
+              <div class="out" id="stOut"></div>
+            </div>
+            <div class="card tool">
+              <h3>NRI cost calculator</h3>
+              <p>
+                Your true all-in cost as an NRI: stamp duty, GST, LTCG on
+                resale, TDS and repatriation limits.
+              </p>
+              <ul class="nri-list">
+                <li><span>TDS (Under-construction)</span><b>1% – 20%</b></li>
+                <li><span>LTCG Tax (Held &gt; 24 mos)</span><b>12.5%</b></li>
+                <li><span>NRO Repatriation Cap</span><b>$1M / yr</b></li>
+              </ul>
+              <a class="btn ink sm" href="#nri">Open NRI hub →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark" id="nri">
+        <div class="wrap two">
+          <div>
+            <h2>Living abroad? Buy in India from anywhere.</h2>
+            <p class="lead lt">
+              India's NRI property platform: RERA-verified listings and a
+              dedicated NRI team, wherever you are.
+            </p>
+            <div class="chips dark left" id="countries"></div>
+            <a class="btn gold" href="#contact">Explore NRI Hub</a>
+          </div>
+          <div class="glass" id="nriLinks"></div>
+        </div>
+      </section>
+
+      <section class="sec" id="why">
+        <div class="wrap why">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+            alt="Modern home with a garden at dusk"
+            loading="lazy"
+          />
+          <div>
+            <h2>More than a listing portal.</h2>
+            <p class="lead dk">
+              India has dozens of property portals. Here's why 25,000+ families
+              chose PropCapital.
+            </p>
+            <div id="faq"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec paper" id="list">
+        <div class="wrap cta">
+          <div>
+            <h2>List your property. ₹0 listing fee.</h2>
+            <p class="lead lt">
+              Our listing experts call you within 2 hours, arrange free HD
+              photography and syndicate your property across 20+ platforms.
+            </p>
+            <form id="leadForm" class="lead-form" novalidate>
+              <input
+                name="name"
+                placeholder="Your name"
+                aria-label="Your name"
+                autocomplete="name"
+                required
+              />
+              <input
+                name="phone"
+                type="tel"
+                placeholder="10-digit mobile"
+                aria-label="Phone"
+                autocomplete="tel"
+                required
+              />
+              <button class="btn gold">List for free</button>
+              <p class="msg" id="leadMsg" role="status"></p>
+            </form>
+          </div>
+          <div class="kpis" id="kpis"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="wrap">
+        <div class="fgrid" id="foot"></div>
+        <p class="seo">
+          PropCapital.ai is NCR's dedicated AI-powered real estate platform for
+          residential and commercial property in <b>Gurugram</b>,
+          <b>Faridabad</b> and <b>Noida</b>. RERA-verified listings, AI property
+          matching, NRI services, home loan help and zero brokerage for buyers.
+        </p>
+        <p class="fine">
+          © 2026 PropCapital.ai. Design project. Listings and figures are sample
+          content.
+        </p>
+      </div>
+    </footer>
+
+    <button class="fab" id="fab" aria-label="Open IRA advisor chat">
+      <b>IRA</b><span>PropCapital advisor</span>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
