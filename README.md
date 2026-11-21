@@ -20,7 +20,7 @@ This project focuses on improving the original PropCapital.ai landing page with 
 - AI-powered property matching demo
 - Property listings with filtering functionality
 - Interactive property cards
-- EMI calculator
+- EMI calculator 
 - Property-related information sections
 - FAQ section
 - Lead enquiry form
