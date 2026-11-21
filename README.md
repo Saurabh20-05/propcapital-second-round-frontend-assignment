@@ -1,10 +1,10 @@
 # PropCapital – Landing Page Redesign
 
-A modern, responsive redesign of the **PropCapital** website, developed as part of the Second Round Technical Evaluation – Frontend Development Assignment.
+A modern, responsive redesign of the **PropCapital.ai** website, developed as part of the Second Round Technical Evaluation – Frontend Development Assignment.
 
 ## About the Project
 
-This project focuses on improving the original PropCapital landing page with a modern UI, better user experience, responsive layouts and interactive frontend elements while maintaining the original brand identity.
+This project focuses on improving the original PropCapital.ai landing page with a modern UI, better user experience, responsive layouts and interactive frontend elements while maintaining the original brand identity.
 
 ## Technologies Used
 
@@ -35,18 +35,14 @@ propcapital-second-round-frontend-assignment/
 ├── style.css
 ├── script.js
 ├── favicon.svg
-└── assets/
-    └── images/
 ```
-
-*The structure above is illustrative; adjust it to match your actual project folders.*
 
 ## How to Run Locally
 
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   git clone [YOUR_GITHUB_REPOSITORY_URL](https://github.com/Saurabh20-05/propcapital-second-round-frontend-assignment)
    ```
 
 2. Open the project folder in VS Code.
@@ -55,15 +51,15 @@ propcapital-second-round-frontend-assignment/
 
 ## Live Demo
 
-**Website:** YOUR_VERCEL_DEPLOYMENT_URL
+**Website:** https://propcapital-second-round-frontend-a.vercel.app/
 
 ## Assignment Details
 
-- **Company:** PropCapital
+- **Company:** PropCapital.ai
 - **Round:** Second Round – Technical Evaluation
 - **Task:** Frontend Landing Page Redesign
 - **Developer:** Saurabh
 
 ---
 
-Developed as part of the PropCapital Frontend Development Technical Assignment.
+Developed as part of the PropCapital.ai Frontend Development Technical Assignment.
